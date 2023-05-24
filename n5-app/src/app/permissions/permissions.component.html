@@ -1,0 +1,63 @@
+<mat-card class="card-form">
+    <mat-card-content>
+        <p *ngIf="!permissions">Please validate connection to API</p>
+        <mat-accordion *ngIf="permissions">
+            <mat-expansion-panel>
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        <p *ngIf="permissions!= undefined && permissions.length == 0 ">No hay permisos asignados aun...
+                        </p>
+                        <p *ngIf=" permissions!= undefined && permissions.length > 0 ">Tenemos {{permissions.length}}
+                            permisos creados.</p>
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <table *ngIf="permissions!= undefined && permissions.length > 0" mat-table [dataSource]="permissions"
+                    class="mat-elevation-z1 demo-table">
+                    <ng-container matColumnDef="id">
+                        <th mat-header-cell *matHeaderCellDef>No.</th>
+                        <td mat-cell *matCellDef="let element">{{element.id}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="nombreEmpleado">
+                        <th mat-header-cell *matHeaderCellDef>Nombre Empleado</th>
+                        <td mat-cell *matCellDef="let element">{{element.nombreEmpleado}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="apellidoEmpleado">
+                        <th mat-header-cell *matHeaderCellDef>Apellido Empleado</th>
+                        <td mat-cell *matCellDef="let element">{{element.apellidoEmpleado}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="tipoPermiso">
+                        <th mat-header-cell *matHeaderCellDef>Tipo Permiso </th>
+                        <td mat-cell *matCellDef="let element">
+                            <p></p>{{getValueTypePermission(element.tipoPermiso)}}
+                        </td>
+                    </ng-container>
+                    <ng-container matColumnDef="fechaPermiso">
+                        <th mat-header-cell *matHeaderCellDef>Fecha creacion</th>
+                        <td mat-cell *matCellDef="let element">{{element.fechaPermiso}}</td>
+                    </ng-container>
+                    <ng-container matColumnDef="acciones">
+                        <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+                        <td mat-cell *matCellDef="let element">
+                            <button mat-icon-button color="primary" (click)="editPermission(element)">
+                                <mat-icon class="small">edit</mat-icon>
+                            </button>
+                            <button mat-icon-button color="primary" (click)="deletePermission(element.id)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                </table>
+            </mat-expansion-panel>
+            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                <mat-expansion-panel-header>
+                    <mat-panel-description>
+                        Agregar un nuevo permiso
+                    </mat-panel-description>
+                </mat-expansion-panel-header>
+                <app-add-permission (newItemEvent)="createdPermissionChild()"></app-add-permission>
+            </mat-expansion-panel>
+        </mat-accordion>
+    </mat-card-content>
+</mat-card>

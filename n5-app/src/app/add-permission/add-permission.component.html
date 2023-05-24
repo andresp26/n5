@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Agregar permiso</h1>
+<div mat-dialog-content>
+    <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre empleado</mat-label>
+                <input matInput placeholder="Placeholder" formControlName="nombreEmpleado">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </div>
+        <div class="row  ">
+            <mat-form-field appearance="outline">
+                <mat-label>Apellido empleado</mat-label>
+                <input matInput placeholder="Placeholder" formControlName="apellidoEmpleado">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+            <p>
+        </div>
+        <div class="row">
+            <mat-form-field>
+                <mat-label>Permiso</mat-label>
+                <mat-select required formControlName="type">
+                    <mat-option *ngFor="let types of permissionsTypes"
+                        [value]="types.id">{{types.descripcion}}</mat-option>
+                    <!-- <mat-option value="two">Second option</mat-option> -->
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <button mat-raised-button color="primary" [disabled]="!contactForm.valid" type="submit">Enviar</button>
+        </div>
+    </form>
+</div>
