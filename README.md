@@ -17,3 +17,9 @@ Front end
 Data:
 
 ![imagen](https://github.com/andresp26/n5/assets/43648074/0fe49ca5-7c8a-483d-8b07-b28fa29d83f8)
+
+![imagen](https://github.com/andresp26/n5/assets/43648074/1d5c7049-ed95-4d83-8863-67122b64d561)
+
+Edición:
+
+![imagen](https://github.com/andresp26/n5/assets/43648074/4aba8cd0-72b8-43b7-a883-d1dd7be0cb18)
