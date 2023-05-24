@@ -1,0 +1,10 @@
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\bin\Debug\DatabaseN5.dacpac
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\bin\Debug\DatabaseN5.dll
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\bin\Debug\DatabaseN5.pdb
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\obj\Debug\DatabaseN5.sqlproj.AssemblyReference.cache
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\obj\Debug\DatabaseN5.dll
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\obj\Debug\DatabaseN5.pdb
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\obj\Debug\Model.xml
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\obj\Debug\refactor.xml
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\obj\Debug\postdeploy.sql
+C:\Users\Plinio.hernandez\source\repos\N5\DatabaseN5\obj\Debug\predeploy.sql
